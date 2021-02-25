@@ -1,8 +1,4 @@
 class ApplicationController < ActionController::Base
-  def hello
-    render html: "hello world"
-  end
-  def bye
-    render html: "this is bye"
-  end
+  # we get access to the helper functions in SessionsHelper
+  include SessionsHelper
 end
