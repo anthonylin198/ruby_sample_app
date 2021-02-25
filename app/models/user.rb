@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  has_many :microposts, dependent: destroy
+  default_scope -> { order(created_at: :desc) }
   before_save :downcase_email
   
   validates :name, presence: true
